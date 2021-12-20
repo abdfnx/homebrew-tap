@@ -5,20 +5,20 @@
 class Resto < Formula
   desc "a CLI app can send pretty HTTP & API requests with TUI"
   homepage "https://github.com/abdfnx/resto"
-  version "0.1.3-test22"
+  version "0.1.3-test23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test22/resto_macos_v0.1.3-test22_amd64.zip"
-      sha256 "5d0e0ed2fe51e76b4f9a6a87813e8920d74bf1ca69a84457bb78ef4d139a6c54"
+      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test23/resto_macos_v0.1.3-test23_amd64.zip"
+      sha256 "6708f1d4f06670cebcc67e4b1667f047ca3ad7a84d1a81fcb185ad9e9006b542"
 
       def install
         bin.install "bin/resto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test22/resto_macos_v0.1.3-test22_arm64.zip"
-      sha256 "51624e7da94212ec06b870981a016fc673230eea6bfe0771235ddb032665f167"
+      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test23/resto_macos_v0.1.3-test23_arm64.zip"
+      sha256 "9330105ec814b08e255598b1fe79c1c9c33211457d99fd6690011fdf5189f0d0"
 
       def install
         bin.install "bin/resto"
@@ -28,24 +28,24 @@ class Resto < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test22/resto_linux_v0.1.3-test22_amd64.zip"
-      sha256 "bd1376098a525fc2dcfee4ac42d89906b54bc05088609ffda5e77bd735c13ba9"
-
-      def install
-        bin.install "bin/resto"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test22/resto_linux_v0.1.3-test22_arm.zip"
-      sha256 "53ae0ebcaacaf7292b10a188c414eb9fc27a4136349b605260b9904aeddde387"
+      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test23/resto_linux_v0.1.3-test23_amd64.zip"
+      sha256 "2a8dae6efe1139652d67ac5ab19ab9d90fcd311eed699d4478c86f8db4e24f22"
 
       def install
         bin.install "bin/resto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test22/resto_linux_v0.1.3-test22_arm64.zip"
-      sha256 "76310bcfd98cb55e5c7af8c68c09e1dc93eb44af2b2efcaa1c406a4304631fbe"
+      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test23/resto_linux_v0.1.3-test23_arm64.zip"
+      sha256 "1bc5bd8b09cc6024914ad7aeed75316cc259ac7345d6e39f4657792b0f4bea63"
+
+      def install
+        bin.install "bin/resto"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/resto/releases/download/v0.1.3-test23/resto_linux_v0.1.3-test23_arm.zip"
+      sha256 "2029c7689b468275bb41f04cf4464779a38a4be41aa87eca99813ece31a72868"
 
       def install
         bin.install "bin/resto"
