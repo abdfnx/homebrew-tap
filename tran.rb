@@ -8,17 +8,17 @@ class Tran < Formula
   version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_arm64.zip"
-      sha256 "14b51fd906d00fe2b8da685cece0f0a2931a0b71b6045641c9cfcc5adcda2730"
+    if Hardware::CPU.intel?
+      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_amd64.zip"
+      sha256 "7ce3ba29220f13af54ed1fd95a3e644a039f7aa188b1c6f2292b00046a890e37"
 
       def install
         bin.install "bin/tran"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_amd64.zip"
-      sha256 "617f65d1ca3d5d36c0bf1c73f0203c15f06834e7da93d43920f0e6d753c0295f"
+    if Hardware::CPU.arm?
+      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_arm64.zip"
+      sha256 "1c290882f92c27bb911fd42ddb863bdf5eadb7f72cc7bc7919f22f1e6b4bb5b5"
 
       def install
         bin.install "bin/tran"
@@ -29,7 +29,7 @@ class Tran < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_arm.zip"
-      sha256 "112696354d47e5bab73f499306de41e140c2e5a7c5edd19e8f63e59915ded2a2"
+      sha256 "4fc9d9d20cdce159831ec9840bf5576081edca1ea93afb6beca81798209cf4ca"
 
       def install
         bin.install "bin/tran"
@@ -37,7 +37,7 @@ class Tran < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_arm64.zip"
-      sha256 "1b8c10d34a125aeba249ad0bdf0c16ac1bbee9e160e383ad24853d5722d8320a"
+      sha256 "76b17aedf30d6467f6bf55a5a8776ac2157bb28dcf51ad33257c60db38f9147d"
 
       def install
         bin.install "bin/tran"
@@ -45,7 +45,7 @@ class Tran < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_amd64.zip"
-      sha256 "e989981c5973df83ad70296f34052601858182198e1471fbbdd885f28954d796"
+      sha256 "0aaad912c42d4ffcb785e37256d18faec4280abe16fb6e868e4876f36034f78e"
 
       def install
         bin.install "bin/tran"
