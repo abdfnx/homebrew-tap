@@ -10,7 +10,7 @@ class Tran < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_arm64.zip"
-      sha256 "790e9e74c835366eab41a5c470286cd7bef66aca8f9d772b59f224125f930f3a"
+      sha256 "84deef4d09621a906a41731611a4d08871ed03f5f6c43e0182e2f12281033134"
 
       def install
         bin.install "bin/tran"
@@ -18,7 +18,7 @@ class Tran < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_macos_v0.1.0_amd64.zip"
-      sha256 "c39eb36b58a5045dbc9a396cec4fa55975f4a8f4a4611ad93513fdf79662db23"
+      sha256 "f0fdd0d9466820a224c8fd25c2b0db0e8fa3a3114738c421e66829f31638a65d"
 
       def install
         bin.install "bin/tran"
@@ -29,15 +29,7 @@ class Tran < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_arm64.zip"
-      sha256 "2e2f52ad73bdf40a8694f72d37abe1045054d795732d8e34ec4998c289608da6"
-
-      def install
-        bin.install "bin/tran"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_arm.zip"
-      sha256 "71d63ccd199192e9666a2c7ae28f304281e3cd921332518ea104d25c223b5a07"
+      sha256 "8d269773857118c178365c667c46a2dd8d54fc53710d3d5a25a5faea345993ee"
 
       def install
         bin.install "bin/tran"
@@ -45,7 +37,15 @@ class Tran < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_amd64.zip"
-      sha256 "129fbbfce51ac8349ccfbc43c617c7fbf729a7e7c7006e820a7fc4918683f652"
+      sha256 "8d5b318772237b428409f90123f33dabda4cbabbbd00ca7689cfb70885516392"
+
+      def install
+        bin.install "bin/tran"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/tran/releases/download/v0.1.0/tran_linux_v0.1.0_arm.zip"
+      sha256 "49973cefb0a2c2d1403fc3e9f21cacf194ffe9855e419660f8bcfaf5827f1878"
 
       def install
         bin.install "bin/tran"
