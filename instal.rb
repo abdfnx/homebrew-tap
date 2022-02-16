@@ -10,7 +10,7 @@ class Instal < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_macos_v0.1.0_amd64.zip"
-      sha256 "5cc0048a3f9a2729d074e173d7b10a922822be3e631e38f17c4e7f1026648eb5"
+      sha256 "7538319a3624250dae162f5c7d4492c6826a84b2deed6f7bf2bec489bde40b14"
 
       def install
         bin.install "bin/instal"
@@ -18,7 +18,7 @@ class Instal < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_macos_v0.1.0_arm64.zip"
-      sha256 "1baa660208c6c41701a2080d3bb3491314f15fd08569a12d2604b422f7890bb2"
+      sha256 "5dacac74be6e5f36c72349a2e5454d55cf700dd91caa3dd5f93ce7128e23447e"
 
       def install
         bin.install "bin/instal"
@@ -27,9 +27,9 @@ class Instal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_linux_v0.1.0_arm.zip"
-      sha256 "b082a53be95c98ba45ca373593696ca11039125ad99c80ce2f41bb62603b5535"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_linux_v0.1.0_arm64.zip"
+      sha256 "59f125d61fa13d5feb1037b5cda19641fb6e98bb15c2972da49e57b7dcd7b2aa"
 
       def install
         bin.install "bin/instal"
@@ -37,15 +37,15 @@ class Instal < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_linux_v0.1.0_amd64.zip"
-      sha256 "f761f46cf21772a49b97a72f481296928950522d8e93675c64fc16028f9c0be7"
+      sha256 "d8249e4fb5fdc4bf60d45ca4712e6a233f6eeef6c7ba22208bbef5841dbb28ce"
 
       def install
         bin.install "bin/instal"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_linux_v0.1.0_arm64.zip"
-      sha256 "fd22698edc5b5f59dbcecbddfe813e76f9dee4a6bd1669c03cba9f64bf0309de"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/instal/releases/download/v0.1.0/instal_linux_v0.1.0_arm.zip"
+      sha256 "dc22b5ff0d389856cb8a7d4ce8332d51ecdb8bb0f9e54946c537cc7cc6c39a94"
 
       def install
         bin.install "bin/instal"
