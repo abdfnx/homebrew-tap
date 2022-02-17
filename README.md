@@ -1,11 +1,12 @@
-@abdfnx homebrew tap
+@abdfnx's homebrew tap
 ---
 
 my homebrew tap for my cli apps
 
+* [`tran`](https://github.com/abdfnx/tran): **🖥️ Securely transfer and send anything between computers with TUI.**
 * [`resto`](https://github.com/abdfnx/resto): **🔗 a CLI app can send pretty HTTP & API requests with TUI**
 * [`doko`](https://github.com/abdfnx/doko): **🐳 The docker you know but with TUI.**
-* [`tran`](https://github.com/abdfnx/tran): **🖥 Securely transfer and send anything between computers with TUI.**
+* [`instal`](https://github.com/abdfnx/instal): **🛰️ Install any binary app from a script URL.**
 
 > to tap my homebrew tap
 
