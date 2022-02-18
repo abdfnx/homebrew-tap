@@ -1,4 +1,4 @@
-@abdfnx's homebrew tap
+@abdfnx's homebrew tap 🍺
 ---
 
 my homebrew tap for my cli apps
