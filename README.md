@@ -14,7 +14,7 @@ my homebrew tap for my cli apps
 brew tap abdfnx/tap
 ```
 
-> to install on of my cli apps
+> to install one of my cli apps
 
 ```bash
 brew install abdfnx/tap/cli-app-name
