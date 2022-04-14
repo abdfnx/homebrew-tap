@@ -5,20 +5,20 @@
 class Doko < Formula
   desc "🐳 docker you know but with TUI."
   homepage "https://github.com/abdfnx/doko"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/doko/releases/download/v0.1.1/doko_macos_v0.1.1_amd64.zip"
-      sha256 "5e3c18378e5118245ac3a013ab384bcde3a8799fadec48932c6ceef8cec57705"
+      url "https://github.com/abdfnx/doko/releases/download/v0.1.2/doko_macos_v0.1.2_amd64.zip"
+      sha256 "7f586087c7f1f20bba658bcca22488e594afa31850aa8ffdd4d1baeafa42cb55"
 
       def install
         bin.install "bin/doko"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdfnx/doko/releases/download/v0.1.1/doko_macos_v0.1.1_arm64.zip"
-      sha256 "53506157afe9f8a3d0593d30641268b2337248b2dc929024f3ecc8afd60163cc"
+      url "https://github.com/abdfnx/doko/releases/download/v0.1.2/doko_macos_v0.1.2_arm64.zip"
+      sha256 "bece2e81cf5e687a0819c0d75c796c6516fd22e84092566664e09ea404a0edcf"
 
       def install
         bin.install "bin/doko"
@@ -28,24 +28,24 @@ class Doko < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/doko/releases/download/v0.1.1/doko_linux_v0.1.1_arm.zip"
-      sha256 "d555f493d8d25557471562dffd91c9a19e4587693b3e007961a41086bf27ee82"
-
-      def install
-        bin.install "bin/doko"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/doko/releases/download/v0.1.1/doko_linux_v0.1.1_amd64.zip"
-      sha256 "71cdf9980860779a651fb7dd4e0800cedf3c27f96bc629d80cdd763d739eeeee"
+      url "https://github.com/abdfnx/doko/releases/download/v0.1.2/doko_linux_v0.1.2_arm.zip"
+      sha256 "800b23e47e3d885e260f9d25508592cb412d65b0adfc5eaa7e26da719a2d7f2c"
 
       def install
         bin.install "bin/doko"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/doko/releases/download/v0.1.1/doko_linux_v0.1.1_arm64.zip"
-      sha256 "51cae2cec5ed254acf43a5a894cd9669b0d0ffbe026fb2a17d7857a8b434104a"
+      url "https://github.com/abdfnx/doko/releases/download/v0.1.2/doko_linux_v0.1.2_arm64.zip"
+      sha256 "d86c62b3e0589a3f84cf69ac7a8524b9c4d215be127399d5ff768ce4b6709055"
+
+      def install
+        bin.install "bin/doko"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/abdfnx/doko/releases/download/v0.1.2/doko_linux_v0.1.2_amd64.zip"
+      sha256 "0028190d783eb90bee5852b441b413cd2279fd73768036ca471b628c68d99813"
 
       def install
         bin.install "bin/doko"
