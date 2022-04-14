@@ -10,7 +10,7 @@ class Tran < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_macos_v0.1.31_amd64.zip"
-      sha256 "6b1ee6a8ea2ac83643710da5c29bb3de12e64ed343ee8c2f2a67633337a3bd6b"
+      sha256 "9b7fa94e09d021a1a6581be2c360a02331e0315677e4cb272792dc608e78272f"
 
       def install
         bin.install "bin/tran"
@@ -18,7 +18,7 @@ class Tran < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_macos_v0.1.31_arm64.zip"
-      sha256 "0d8c77b4462501410841b36c2ac265eb2260aa92e7ffff7b54287381dda7d475"
+      sha256 "172ae23fccfafaaac55962da68161bcf3ea7cc95736396b3db1519020be30687"
 
       def install
         bin.install "bin/tran"
@@ -27,9 +27,9 @@ class Tran < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_linux_v0.1.31_arm64.zip"
-      sha256 "2aec352ee12539c276b92c74a69ee7c480082517d982e00c215176d115355246"
+    if Hardware::CPU.intel?
+      url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_linux_v0.1.31_amd64.zip"
+      sha256 "f6acf0c8c13e6784285f1e194728bfe906bff4d69cf5596fca95a9c383c23248"
 
       def install
         bin.install "bin/tran"
@@ -37,15 +37,15 @@ class Tran < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_linux_v0.1.31_arm.zip"
-      sha256 "0f5e1fcbb43b6c29e5ae6e06cd6fad484d32fc88956f022e462ec70fc517a6a3"
+      sha256 "70ee7e21e52b1d31ec193868535ce0b5b9ade0096eadeb871114db17499fe087"
 
       def install
         bin.install "bin/tran"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_linux_v0.1.31_amd64.zip"
-      sha256 "c7e86dbe995e62d4af7e325b7c0655e761cb27406ee97e9b69faabd1d89cf1ad"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/tran/releases/download/v0.1.31/tran_linux_v0.1.31_arm64.zip"
+      sha256 "978237c5636af46efedcb3b9e7aa6a959c431f2e3d3f62bdeb0d1e744a8beb57"
 
       def install
         bin.install "bin/tran"
