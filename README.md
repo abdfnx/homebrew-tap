@@ -7,6 +7,7 @@ my homebrew tap for my cli apps
 * [`resto`](https://github.com/abdfnx/resto): **🔗 a CLI app can send pretty HTTP & API requests with TUI**
 * [`doko`](https://github.com/abdfnx/doko): **🐳 The docker you know but with TUI.**
 * [`instal`](https://github.com/abdfnx/instal): **🛰️ Install any binary app from a script URL.**
+* [`gomo`](https://github.com/abdfnx/gomo): **📐 Simple Golang multi modules tool.**
 
 > to tap my homebrew tap
 
