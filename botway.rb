@@ -5,21 +5,21 @@
 class Botway < Formula
   desc "🤖 Generate, build, handle and deploy your own bot with your favorite language, for Discord, or Telegram, or Slack"
   homepage "https://github.com/abdfnx/botway"
-  version "0.1.0-beta.521"
+  version "0.1.0-beta.522"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.521/botway_macos_v0.1.0-beta.521_arm64.zip"
-      sha256 "ea66848e953276352cfc42c4725044c7aafa2eb654503cd3dd1163790678d464"
+    if Hardware::CPU.intel?
+      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.522/botway_macos_v0.1.0-beta.522_amd64.zip"
+      sha256 "5c6e6a2ca684a4df74432b9f085b7f6a85529a75322a8a9fac45213b670332b2"
 
       def install
         bin.install "bin/botway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.521/botway_macos_v0.1.0-beta.521_amd64.zip"
-      sha256 "1199a04511bdf7e9d74d1a96e40163ba5568a8a02c5bebf8e4adadb515be78d7"
+    if Hardware::CPU.arm?
+      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.522/botway_macos_v0.1.0-beta.522_arm64.zip"
+      sha256 "7f8e016af1a34dc2bab12dc7e81b06d73e3d2becff8e043ab14768d6eb4237d2"
 
       def install
         bin.install "bin/botway"
@@ -28,25 +28,25 @@ class Botway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.521/botway_linux_v0.1.0-beta.521_arm.zip"
-      sha256 "06aa30a9b70e8d3922832003b2c58fb364bda0c044a0bacf15c88535c0ba8d94"
-
-      def install
-        bin.install "bin/botway"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.521/botway_linux_v0.1.0-beta.521_arm64.zip"
-      sha256 "292398279c08fcd2b32f0f9348bdb3d49dadb09ffae399cbf3c6ccfdbbd94ca1"
+      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.522/botway_linux_v0.1.0-beta.522_arm64.zip"
+      sha256 "3fedc34fdaf1b277a707d5cb0264f5edfef3c1897b78f776d317716ccc20f996"
 
       def install
         bin.install "bin/botway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.521/botway_linux_v0.1.0-beta.521_amd64.zip"
-      sha256 "3db976e116b8427c859abaeed9e431fd5299675159b3ed989367de4296808122"
+      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.522/botway_linux_v0.1.0-beta.522_amd64.zip"
+      sha256 "8490b84756fac173f5b18d5f019419fb4ac5313a1f129550b897969be8271209"
+
+      def install
+        bin.install "bin/botway"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abdfnx/botway/releases/download/v0.1.0-beta.522/botway_linux_v0.1.0-beta.522_arm.zip"
+      sha256 "3779e008eedc0cb2eecdd10d0c38cef6dc72204b64f749f3e2dedd5b744fd307"
 
       def install
         bin.install "bin/botway"
